@@ -3,6 +3,10 @@
 1. Project Objective:
 To develop a predictive model using logistic regression and other machine learning techniques to determine the likelihood of patients experiencing a heart attack, based on clinical and diagnostic data.
 
+Quick overview of results: 
+  - Logistic Regression was the most successful model, with accuracy = 0.90 and AUC-ROC = 0.94.
+  - The top predictors were num_major_vessels_1 and _2, and chest_pain_type_2 and -3.
+
 2. Data Collection and Cleaning
 Objective: Obtain, clean, and understand the dataset to prepare it for analysis and modeling.
 
@@ -52,28 +56,29 @@ Objective: Build and evaluate logistic regression and alternative models for pre
 
   - 4.2 Model Selection
     - Logistic Regression (baseline model).
+    - Decision Trees
     - Random Forest Classifier.
     - Gradient Boosted Trees (XGBoost).
 
   - 4.3 Performance Metrics: **See "Predictive Models" folder for details.**
     - Accuracy, Precision, Recall, F1 Score, and AUC-ROC curve.
 
+5. Steps to Reproduce:
+  - Run the code in the "Notebooks" folder in Jupyter Notebooks or other Python IDE. 
+
 5. Results: **See "Results" folder for details.**
 
 6. Model Interpretability
-  - 6.1 Feature Importance: Top features contributing to predictions:
+  - Feature Importance: Top features contributing to predictions:
     - Previous Peak
     - Num Major Vessels
     - Chest Pain Type
     - Thalium Stress Test
 
-  - 6.2 SHAP Analysis
-      - Provided insights into how each feature impacted predictions at the individual and population levels.
-
 7. Conclusion and Recommendations
 
   - 7.1 Key Findings
-    - The Gradient Boosted Trees model performed the best, achieving 88% accuracy.
+    - The Logistic Regression model performed the best, achieving 90% accuracy.
     - Previous Peak and Num Major Vessels were the most significant predictors of heart attack risk.
     - Both continuous and categorical features played critical roles in prediction.
 
@@ -81,15 +86,11 @@ Objective: Build and evaluate logistic regression and alternative models for pre
     - Physicians and healthcare providers can use this model to identify high-risk patients and prioritize preventative interventions.
 
   - 7.3 Limitations
-    - Dataset size (n=303n = 303n=303) limits generalizability.
+    - Dataset size (n=303) limits generalizability.
     - Further validation needed on diverse populations.
 
   - 7.4 Future Work
     - Collect more extensive and diverse datasets.
     - Explore ensemble models for improved performance.
 
-All code for this project is available in the: [Notebooks Folder](https://github.com/markcoty/Heart-Attack-Prediction-Model/tree/main/Notebooks)
-
-
-
-
+All code for this project is available in the: [Notebooks Folder](https://github.com/markcoty/Heart-Attack-Risk-Model/tree/master/Notebooks)
